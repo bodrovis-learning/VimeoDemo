@@ -1,0 +1,7 @@
+<%= link_to 'Grab Vimeo key', '/auth/vimeo' %>
+
+<% if @sample_responses %>
+  <% @sample_responses.each do |response| %>
+    <pre><%= response %></pre>
+  <% end %>
+<% end %>
