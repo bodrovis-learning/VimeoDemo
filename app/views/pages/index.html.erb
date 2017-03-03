@@ -5,3 +5,32 @@
     <pre><%= response %></pre>
   <% end %>
 <% end %>
+
+<!-- embedded via iframe -->
+<iframe src="https://player.vimeo.com/video/76979871" width="640"
+        height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+<div id="my_block"></div>
+
+<button id="load_new_video">Load another video with 76979871 id</button>
+<script>
+  // embedded on the fly. allows to set many params, control the player, listen for events and much more
+  // read full docs here https://github.com/vimeo/player.js
+  jQuery(document).on('turbolinks:load', function() {
+    // jQuery(document).ready(function() {   ------ if you are not using turbolinks
+    var options = {
+      id: 59777392,
+      width: 640,
+      loop: true
+    };
+
+    var player = new Vimeo.Player('my_block', options);
+
+    player.setVolume(50);
+
+    $('#load_new_video').click(function() { // dynamically load another video into the second player on button click
+      player.loadVideo(76979871);
+    });
+  });
+</script>

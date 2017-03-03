@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-    if ENV['VIMEO_TOKEN']
+    if ENV['VIMEO_TOKEN'].length > 0
       @sample_responses = [
           get_and_load("https://api.vimeo.com/me?fields=uri,name&"),
           get_and_load("https://api.vimeo.com/videos/113009024?")

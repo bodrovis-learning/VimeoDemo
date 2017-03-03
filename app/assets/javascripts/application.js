@@ -12,5 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require vimeo_player
 //= require turbolinks
-//= require_tree .
