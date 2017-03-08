@@ -6,6 +6,7 @@ class PagesController < ApplicationController
           get_and_load("https://api.vimeo.com/videos/113009024?")
       ]
     end
+    @videos = Video.all
   end
 
   private

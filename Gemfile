@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'omniauth-vimeo' # OAuth 2
 gem 'rest-client' # make API calls
 gem 'oj' # parse JSON
+gem 'video_info'
 
 group :development do
   gem 'pry-rails'
